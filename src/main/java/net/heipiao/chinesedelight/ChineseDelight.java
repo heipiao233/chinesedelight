@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 public class ChineseDelight implements ModInitializer {
 	public static final String MODID = "chinesedelight";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
-    public static final ItemGroup GROUP = FabricItemGroupBuilder.build(new Identifier(ChineseDelight.MODID, "mod_item_group"), ModItems.IRON_SPATULA.item::getDefaultStack);
+    public static final ItemGroup GROUP = FabricItemGroupBuilder.build(new Identifier(ChineseDelight.MODID, "mod_item_group"), () -> ModItems.IRON_SPATULA.item.get().getDefaultStack());
 
 	@Override
 	public void onInitialize() {

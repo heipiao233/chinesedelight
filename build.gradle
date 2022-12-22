@@ -90,7 +90,9 @@ publishing {
 }
 
 modrinth {
-	token = MODRINTH_TOKEN
+	if(project.hasProperty("MODRINTH_TOKEN")) {
+		token = MODRINTH_TOKEN;
+	}
 	projectId = "chinesedelight"
 	versionType = "alpha"
 	uploadFile = remapJar
