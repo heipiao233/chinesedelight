@@ -23,6 +23,9 @@
     ],
     "client": [
       "net.heipiao.chinesedelight.ChineseDelightClient"
+    ],
+    "rei_client": [
+      "net.heipiao.chinesedelight.rei.ChineseDelightClientPlugin"
     ]
   },
   "mixins": [

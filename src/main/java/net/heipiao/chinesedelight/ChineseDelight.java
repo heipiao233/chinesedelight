@@ -11,6 +11,8 @@ import net.heipiao.chinesedelight.item.ModItems;
 import net.heipiao.chinesedelight.recipe.ModRecipeSerializers;
 import net.heipiao.chinesedelight.recipe.ModRecipeTypes;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 
 public class ChineseDelight implements ModInitializer {
@@ -26,4 +28,8 @@ public class ChineseDelight implements ModInitializer {
 		ModRecipeSerializers.register();
 		ModRecipeTypes.register();
 	}
+
+    public static Text getText(String string, Object... args) {
+        return new TranslatableText(MODID + "." + string, args);
+    }
 }
