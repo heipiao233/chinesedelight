@@ -3,7 +3,10 @@ package net.heipiao.chinesedelight.item;
 import java.util.function.Supplier;
 
 import com.nhoryzon.mc.farmersdelight.item.ModItemSettings;
+
 import net.heipiao.chinesedelight.ChineseDelight;
+import net.heipiao.chinesedelight.block.ModBlocks;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
@@ -14,7 +17,8 @@ public enum ModItems {
     IRON_SPATULA(() -> new SpatulaItem(ToolMaterials.IRON, ModItemSettings.noStack().group(ChineseDelight.GROUP))),
     GOLD_SPATULA(() -> new SpatulaItem(ToolMaterials.GOLD, ModItemSettings.noStack().group(ChineseDelight.GROUP))),
     DIAMOND_SPATULA(() -> new SpatulaItem(ToolMaterials.DIAMOND, ModItemSettings.noStack().group(ChineseDelight.GROUP))),
-    NETHERITE_SPATULA(() -> new SpatulaItem(ToolMaterials.NETHERITE, ModItemSettings.noStack().group(ChineseDelight.GROUP)));
+    NETHERITE_SPATULA(() -> new SpatulaItem(ToolMaterials.NETHERITE, ModItemSettings.noStack().group(ChineseDelight.GROUP))),
+    WOK(() -> new BlockItem(ModBlocks.WOK.block, ModItemSettings.noStack().group(ChineseDelight.GROUP)));
     private final Supplier<Item> itemSupplier;
     public Item item;
     ModItems(Supplier<Item> item) {
